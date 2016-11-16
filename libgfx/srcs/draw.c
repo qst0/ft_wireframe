@@ -6,7 +6,7 @@
 /*   By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/23 15:47:11 by myoung            #+#    #+#             */
-/*   Updated: 2016/11/04 23:34:42 by myoung           ###   ########.fr       */
+/*   Updated: 2016/11/05 13:27:25 by myoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ void		draw_point_to_img(t_view *view, int x, int y, float z)
 		i = (x * (view->bits_per_pixel / 8)) + (y * view->size_line);
 		if (view->pixels[i] || view->pixels[i + 1] || view->pixels[i + 2])
 			return ;
+		if (!view->z_max && !view->z_min)
+			view->z_max = 1;
 		which = ((z - view->z_min) / (view->z_max - view->z_min))
 			* (view->num_colors);
 		color = view->colors[abs((int)which - 1)];
@@ -61,6 +63,8 @@ void		draw_point(t_view *view, int x, int y, float z)
 
 	if (x > 0 && y > 0 && x < WIN_WIDTH && y < WIN_HEIGHT)
 	{
+		if (!view->z_max && !view->z_min)
+			view->z_max = 1;
 		which = ((z - view->z_min) / (view->z_max - view->z_min))
 			* (view->num_colors);
 		color = view->colors[abs((int)which - 1)];
