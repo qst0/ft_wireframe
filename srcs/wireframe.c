@@ -6,7 +6,7 @@
 /*   By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 05:27:57 by myoung            #+#    #+#             */
-/*   Updated: 2017/01/05 14:52:18 by myoung           ###   ########.fr       */
+/*   Updated: 2017/01/05 16:18:32 by myoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,9 @@ t_view	*new_view(void)
 	view->y_shift = 0.0;
 	view->z_shift = 0.0;
 	view->focal_dist = 7;
+	view->r = 1;
+	view->g = 1;
+	view->b = 1;
 	view->id = mlx_init();
 	view->win = mlx_new_window(view->id, WIN_WIDTH, WIN_HEIGHT, "FDF 42");
 	view->pressed = (t_keys*)ft_memalloc(sizeof(t_keys));

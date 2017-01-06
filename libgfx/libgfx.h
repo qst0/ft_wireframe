@@ -6,7 +6,7 @@
 /*   By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/23 03:27:52 by myoung            #+#    #+#             */
-/*   Updated: 2017/01/04 20:36:41 by myoung           ###   ########.fr       */
+/*   Updated: 2017/01/05 16:17:54 by myoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,9 @@ typedef struct	s_view
 	float		x_shift;
 	float		y_shift;
 	float		z_shift;
+	float		r;
+	float		g;
+	float		b;
 	int			focal_dist;
 	int			bits_per_pixel;
 	int			size_line;

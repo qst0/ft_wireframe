@@ -6,7 +6,7 @@
 /*   By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 05:26:48 by myoung            #+#    #+#             */
-/*   Updated: 2016/11/04 22:56:27 by myoung           ###   ########.fr       */
+/*   Updated: 2017/01/05 16:19:33 by myoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		expose_hook(t_view *view)
 
 int		my_loop_hook(t_view *view)
 {
+	color_hook(view);
 	translate_hook(view);
 	if (view->pressed->w)
 		view->theta += 0.05;

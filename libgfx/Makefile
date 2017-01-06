@@ -6,7 +6,7 @@
 #    By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/10/23 15:36:22 by myoung            #+#    #+#              #
-#    Updated: 2016/11/04 23:10:10 by myoung           ###   ########.fr        #
+#    Updated: 2017/01/05 16:08:41 by myoung           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ FILES +=	matrix.c		# Matrix functions: bzero id mult scale trans
 FILES +=	matrix_rot.c	# Matrix functions:
 FILES +=	vertex.c		# Vertex creation:
 FILES +=	image.c			# easier image creation
+FILES +=	color.c			# color table
 FILES +=	toggle_keys.c
 
 FLAGS = -Wall -Wextra -Werror

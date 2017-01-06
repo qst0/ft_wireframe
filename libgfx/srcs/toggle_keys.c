@@ -6,7 +6,7 @@
 /*   By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 22:03:48 by myoung            #+#    #+#             */
-/*   Updated: 2017/01/05 14:31:04 by myoung           ###   ########.fr       */
+/*   Updated: 2017/01/05 16:29:50 by myoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void		toggle_wasd(int keycode, t_view *view, int toggle)
 		view->pressed->d = toggle;
 }
 
-static void		toggle_ijkl(int keycode, t_view *view, int toggle)
+static void		toggle_ijklc(int keycode, t_view *view, int toggle)
 {
 	if (keycode == KEY_I)
 		view->pressed->i = toggle;
@@ -34,12 +34,14 @@ static void		toggle_ijkl(int keycode, t_view *view, int toggle)
 		view->pressed->k = toggle;
 	if (keycode == KEY_L)
 		view->pressed->l = toggle;
+	if (keycode == KEY_C)
+		view->pressed->c = toggle;
 }
 
 void			toggle_pressed(int keycode, t_view *view, int toggle)
 {
 	toggle_wasd(keycode, view, toggle);
-	toggle_ijkl(keycode, view, toggle);
+	toggle_ijklc(keycode, view, toggle);
 	if (keycode == KEY_X)
 		view->pressed->x = toggle;
 	if (keycode == KEY_Y)

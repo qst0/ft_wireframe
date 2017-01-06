@@ -6,7 +6,7 @@
 /*   By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/23 20:13:58 by myoung            #+#    #+#             */
-/*   Updated: 2016/11/04 22:59:30 by myoung           ###   ########.fr       */
+/*   Updated: 2017/01/05 16:25:04 by myoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	view_set_hooks(t_view *view);
 void	draw_projected(t_view *view);
 
 t_view	*new_view();
+void	color_hook(t_view *view);
 void	zook_hook(t_view *view);
 void	translate_hook(t_view *view);
 void	scale_hook_work(t_view *view);

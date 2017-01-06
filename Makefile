@@ -6,7 +6,7 @@
 #    By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/04 14:58:02 by myoung            #+#    #+#              #
-#    Updated: 2017/01/04 15:00:04 by myoung           ###   ########.fr        #
+#    Updated: 2017/01/05 16:26:00 by myoung           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ FILES	+=	zoom.c			# Zoom and translate functions
 FILES	+=	wireframe.c		# view and local_to_world_to_aligned_to_projected	
 FILES	+=	hooks.c			# Loop, exit, expose and key hooks
 FILES	+=	draw_fdf.c		# Connect the vertexs with lines
+FILES	+=	color_fdf.c		# color random for fdf
 
 SRCS = $(addprefix srcs/, $(FILES))
 OBJS = $(addprefix build/, $(FILES:.c=.o))

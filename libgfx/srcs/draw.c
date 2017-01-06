@@ -6,33 +6,11 @@
 /*   By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/23 15:47:11 by myoung            #+#    #+#             */
-/*   Updated: 2016/11/05 13:27:25 by myoung           ###   ########.fr       */
+/*   Updated: 2017/01/05 16:07:17 by myoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libgfx.h>
-
-void		init_color_table(t_view *view, int colors)
-{
-	int				i;
-	float			f;
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-
-	view->colors = (t_color*)malloc(sizeof(t_color) * colors);
-	f = 0;
-	i = -1;
-	while (++i < colors)
-	{
-		g = (cos(f) + 1) * 127;
-		r = (sin(f) + 1) * 127;
-		b = (-cos(f) + 1) * 127;
-		view->colors[i] = ((int)b) << 16 | ((int)g) << 8 | r;
-		f += M_PI / colors;
-	}
-	view->num_colors = colors;
-}
 
 void		draw_point_to_img(t_view *view, int x, int y, float z)
 {
