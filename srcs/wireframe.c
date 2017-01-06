@@ -6,7 +6,7 @@
 /*   By: myoung <myoung@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 05:27:57 by myoung            #+#    #+#             */
-/*   Updated: 2016/11/04 21:49:01 by myoung           ###   ########.fr       */
+/*   Updated: 2017/01/05 14:52:18 by myoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ t_view	*new_view(void)
 	t_view *view;
 
 	view = (t_view*)malloc(sizeof(t_view));
-	view->project = 1;
+	view->project = 0;
 	view->theta = 0.0;
 	view->phi = 0.0;
 	view->psi = 0.0;
